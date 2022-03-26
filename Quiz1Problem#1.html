@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Quiz 1 Problem #1</title>
+	
+</head>
+<body>
+
+    <script>
+        document.write(`<h1>Quiz 1 Problem #1 </h1><h2>Pangan, Rendy N. of BSIT 3L-G2</h2><br><br>`);
+		
+        for (let r = 1; r < 201; r++){
+            if ((r%3==0) && (r%5==0)){
+                console.log(`Undecided`);
+                document.write(`Undecided<br>`);
+            }
+			
+				else if (r % 3 == 0) {
+					console.log(`Leni`);
+					document.write(`Leni<br>`);
+				}
+				
+				else if (r % 5 == 0){
+					console.log(`BongBong`);
+					document.write(`BongBong<br>`);
+				}
+				
+            else{
+                console.log(r);
+                document.write(r + `<br>`);
+            }
+        }
+		
+    </script>
+</body>
+
+</html>
