@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Quiz 1 Problem #2</title>
+	
+</head>
+<body>
+
+    <script>
+        document.write(`<h1>Quiz 1 Problem #2 </h1><h2>Pangan, Rendy N. of BSIT 3L-G2</h2><br><br>`);
+        const voters = [
+            { name: "John Doe",
+            isRegistered: true
+			},
+				{
+					name: "Nick Fury",
+					isRegistered: false
+				},
+				
+					{
+						name: "Steve Rogers",
+						isRegistered: true
+					},
+					
+				{ 
+					name: "Tony Stark", 
+					isRegistered: false 
+				},
+				
+			{ 
+				name: "Stephen Strange",
+				isRegistered: false 
+			}
+			
+			];
+
+        const registeredVoters = voters.filter(registeredVoter=>{
+            return registeredVoter.isRegistered == true;
+        })
+
+			const nonregisteredVoters = voters.filter(nonregisteredVoter=>{
+				return nonregisteredVoter.isRegistered == false;
+			})
+
+
+
+        console.log(`Non-Registered Voters:`);
+        document.write(`Non-Registered Voters:<br>`);
+        let r = 1;
+		
+			nonregisteredVoters.forEach((nonregisteredVoter, index) =>{
+				console.log(`${index+1}.) ${nonregisteredVoter.name}`)
+				document.write(r , `.) ${nonregisteredVoter.name} <br>`);
+				r++;
+			})
+        r = 1;
+		
+        console.log(`Registered Voters:`);
+        document.write(`<br>Registered Voters:<br>`);
+		
+        registeredVoters.forEach((registeredVoter, index) =>{
+            console.log(`${index+1}.) ${registeredVoter.name}`)
+            document.write(r , `.) ${registeredVoter.name} <br>`);
+            r++;
+        })
+
+    </script>
+</body>
+
+</html>
